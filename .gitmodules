@@ -1,0 +1,3 @@
+[submodule "LeekRelativity"]
+	path = Assets/LeekRelativity
+	url = git@github.com:ENPH-479-VR-Relativity/LeekRelativity.git
