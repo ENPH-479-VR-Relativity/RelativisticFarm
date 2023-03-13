@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using static System.Math;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+using Oculus.Interaction.Samples;
 
+using static System.Math;
 
 /// <summary>
 /// Class <c>PlayerVelocity</c> extends MonoBehaviour and records the velocity of the player. Useful resources include:
@@ -46,10 +47,25 @@ public class PlayerVelocity : MonoBehaviour {
         Vector3 velocity;
         if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceVelocity, out velocity))
         {
-            if (Sqrt(velocity[0] * velocity[0] + velocity[1] * velocity[1] + velocity[2] * velocity[2]) > 0.5)
+            double velocity_mag = Sqrt(velocity[0] * velocity[0] + velocity[1] * velocity[1] + velocity[2] * velocity[2]);
+            
+            if (velocity_mag > 0.1)
             {
-                print(velocity);
+                ScaleObject(velocity_mag);
             }
+        }
+    }
+
+    private void ScaleObject(double velocity)
+    {
+        double c = 100.0;
+        double scaling_factor = 1 + (velocity / c);
+
+        if (transform.localScale.x * scaling_factor > 3 || transform.localScale.y * scaling_factor > 3 || transform.localScale.z * scaling_factor > 3) {
+            transform.localScale = new Vector3((float) 0.5, (float) 0.5, (float) 0.5);
+        } else
+        {
+            transform.localScale = new Vector3((float)(transform.localScale.x * scaling_factor), (float)(transform.localScale.y * scaling_factor), (float)(transform.localScale.z * scaling_factor));
         }
     }
 }
