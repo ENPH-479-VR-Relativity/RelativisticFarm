@@ -4,6 +4,14 @@ using static System.Math;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+
+
+/// <summary>
+/// Class <c>PlayerVelocity</c> extends MonoBehaviour and records the velocity of the player. Useful resources include:
+/// http://man.hubwiz.com/docset/Unity_3D.docset/Contents/Resources/Documents/docs.unity3d.com/Manual/xr_input.html
+/// http://man.hubwiz.com/docset/Unity_3D.docset/Contents/Resources/Documents/docs.unity3d.com/ScriptReference/XR.XRNode.html
+/// https://docs.unity3d.com/ScriptReference/XR.CommonUsages.html
+/// </summary>
 public class PlayerVelocity : MonoBehaviour {
 
     private UnityEngine.XR.InputDevice device;
