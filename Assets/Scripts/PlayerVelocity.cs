@@ -58,7 +58,7 @@ public class PlayerVelocity : MonoBehaviour {
 
     private void ScaleObject(double velocityMagnitude)
     {
-        double c = 100.0;
+        double c = 100.0; // TODO: growth is really fast rn, we should slow it down
         double scalingFactor = 1 + (velocityMagnitude / c);
 
         // The asset "dies" when it reaches it's growth limit (arb. 3)
