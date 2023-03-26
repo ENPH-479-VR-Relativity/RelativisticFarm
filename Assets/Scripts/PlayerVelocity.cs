@@ -47,25 +47,29 @@ public class PlayerVelocity : MonoBehaviour {
         Vector3 velocity;
         if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceVelocity, out velocity))
         {
-            double velocity_mag = Sqrt(velocity[0] * velocity[0] + velocity[1] * velocity[1] + velocity[2] * velocity[2]);
+            double velocityMagnitude = Sqrt(velocity[0] * velocity[0] + velocity[1] * velocity[1] + velocity[2] * velocity[2]);
             
-            if (velocity_mag > 0.1)
+            if (velocityMagnitude > 0.1)
             {
-                ScaleObject(velocity_mag);
+                ScaleObject(velocityMagnitude);
             }
         }
     }
 
-    private void ScaleObject(double velocity)
+    private void ScaleObject(double velocityMagnitude)
     {
         double c = 100.0;
-        double scaling_factor = 1 + (velocity / c);
+        double scalingFactor = 1 + (velocityMagnitude / c);
 
-        if (transform.localScale.x * scaling_factor > 3 || transform.localScale.y * scaling_factor > 3 || transform.localScale.z * scaling_factor > 3) {
-            transform.localScale = new Vector3((float) 0.5, (float) 0.5, (float) 0.5);
-        } else
+        // The asset "dies" when it reaches it's growth limit (arb. 3)
+        if (transform.localScale.x * scalingFactor > 3 || transform.localScale.y * scalingFactor > 3 || transform.localScale.z * scalingFactor > 3)
         {
-            transform.localScale = new Vector3((float)(transform.localScale.x * scaling_factor), (float)(transform.localScale.y * scaling_factor), (float)(transform.localScale.z * scaling_factor));
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        } else
+        {   // TODO: The crops are currently being scaled with the same magnitude in all directions
+            // We may need to arbitrarily reduce scaling in x and z so that they don't collide when growing.
+            float growthFactor = Random.Range(1f, 1.02f);
+            transform.localScale = new Vector3((float)(transform.localScale.x * scalingFactor), (float)(transform.localScale.y * scalingFactor * growthFactor), (float)(transform.localScale.z * scalingFactor));
         }
     }
 }
