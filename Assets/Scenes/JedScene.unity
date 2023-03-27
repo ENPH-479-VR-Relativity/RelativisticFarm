@@ -5124,6 +5124,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23388920918567862, guid: 8e1b56a2b270eba4686a2e403b8fedb3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43cdca7f443d44c47894d5dc08852125, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e1b56a2b270eba4686a2e403b8fedb3, type: 3}
 --- !u!1 &488730134 stripped
@@ -5274,7 +5278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505562319}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -24, y: 1, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 321104943}
@@ -5823,6 +5827,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624dec83b4874c24db075b59e586f716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &557666784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1830921304398806, guid: 8e1b56a2b270eba4686a2e403b8fedb3, type: 3}
+  m_PrefabInstance: {fileID: 484162705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &557666787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557666784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1062a394b9b224597fd16182b12885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalProperties: {fileID: 0}
+  objectPos: {fileID: 0}
 --- !u!1001 &558563610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6234,6 +6257,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624dec83b4874c24db075b59e586f716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &635635365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1967487700204358, guid: 646ad26dcf463c14dbe4b56f84b816db, type: 3}
+  m_PrefabInstance: {fileID: 1574348148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &635635368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635635365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1062a394b9b224597fd16182b12885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalProperties: {fileID: 1304530885}
+  objectPos: {fileID: 1574348149}
 --- !u!1001 &657024206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11209,6 +11251,7 @@ GameObject:
   - component: {fileID: 1304530880}
   - component: {fileID: 1304530884}
   - component: {fileID: 1304530883}
+  - component: {fileID: 1304530885}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11275,7 +11318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304530879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 321104943}
@@ -11332,6 +11375,94 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1304530885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304530879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0b9e000b92d5446b5fa091de0a87d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSpatialDistortionEnabled: 1
+  IsSpotlightEnabled: 1
+  IsDopplerEnabled: 1
+  LightSpeed: 1
+  positionProperty:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Position Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2ca346ae-172b-47ee-873f-a7d80557abe2
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  rotationProperty:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Rotation Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: af1b3464-88b6-4a62-8aa3-9675990fa73e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  velocityProperty:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Velocity Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 21767513-2cf0-4f3f-ab2a-ff30767ad01b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  angularVelocityProperty:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Angular Velocity Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 50aa2def-1054-430e-8990-dba79676e82e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  accelerationProperty:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Acceleration Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: cd32d9ad-d1c6-4126-b86c-c44bf185a00b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  angularAccelerationProperty:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Angular Acceleration Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 60fec721-c8ea-4a5b-b456-03cc4523172a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &1314536132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8017956608716805134, guid: e3f234cd15680a549b85c1d79b6c3b68, type: 3}
@@ -13999,6 +14130,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23668198153763786, guid: 646ad26dcf463c14dbe4b56f84b816db, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43cdca7f443d44c47894d5dc08852125, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 646ad26dcf463c14dbe4b56f84b816db, type: 3}
 --- !u!4 &1574348149 stripped
