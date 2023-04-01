@@ -11434,7 +11434,8 @@ MonoBehaviour:
   IsSpatialDistortionEnabled: 1
   IsSpotlightEnabled: 1
   IsDopplerEnabled: 1
-  LightSpeed: 250
+  LightSpeed: 10
+  SpaceScalar: 5
   positionProperty:
     m_UseReference: 1
     m_Action:
