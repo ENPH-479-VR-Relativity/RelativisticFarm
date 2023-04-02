@@ -6,7 +6,7 @@ using Oculus.Interaction.Samples;
 
 using static System.Math;
 
-public class PlayerVelocity : MonoBehaviour {
+public class RelativisticGrowth : MonoBehaviour {
 
     private TimeDilation timeDilation;
 
