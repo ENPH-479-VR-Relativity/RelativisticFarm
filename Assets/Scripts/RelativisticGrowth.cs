@@ -13,6 +13,7 @@ public class RelativisticGrowth : MonoBehaviour {
     public float baseScale = 1f;
     public float resetScale = 3f;
     public float resetTime = 50f;
+    public float widthFactor = 0.05f;
 
     private void Start()
     {
@@ -21,24 +22,24 @@ public class RelativisticGrowth : MonoBehaviour {
 
     private void Update ()
     {
-        float growthFactor = Random.Range(1f, 1.02f);
+        float growthVariation = Random.Range(0.8f, 1.5f);
 
-        float scaleFactor = (Time.deltaTime * timeDilation.gamma) * resetScale / resetTime;
+        float scaleFactor = (Time.deltaTime * timeDilation.gamma * 0.05f) * resetScale / resetTime;
 
         if (transform.localScale.y > resetScale)
         {
             transform.localScale = new Vector3(
                 (float)(baseScale),
-                (float)(baseScale * growthFactor),
+                (float)(baseScale * growthVariation),
                 (float)(baseScale)
             );
         }
         else
         {
             transform.localScale = transform.localScale + new Vector3(
-                (float)(transform.localScale.x * scaleFactor),
-                (float)(transform.localScale.x * scaleFactor * growthFactor),
-                (float)(transform.localScale.x * scaleFactor)
+                (float)(transform.localScale.x * scaleFactor * widthFactor),
+                (float)(transform.localScale.y * scaleFactor * growthVariation),
+                (float)(transform.localScale.z * scaleFactor * widthFactor)
             );
         }
     }
