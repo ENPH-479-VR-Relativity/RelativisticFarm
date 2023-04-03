@@ -10,37 +10,58 @@ public class RelativisticGrowth : MonoBehaviour {
 
     private TimeDilation timeDilation;
 
-    public float baseScale = 1f;
-    public float resetScale = 3f;
-    public float resetTime = 50f;
+    public float maxScale = 3f; // As big as the object will get in the y-axis. 
+    public float resetScale = 5f; // Effectively the amount of time before reset, in units of scale. While resetScale > scale > maxScale, the object won't grow but won't reset. 
+    public float growthRate = 0.0035f;
+    public Vector3 baseScale = new Vector3(1.0f, 1.0f, 1.0f);
     public float widthFactor = 0.05f;
+
+    private Vector3 scale { get; set; } = Vector3.zero;
+    private float actualMax = 0f;
 
     private void Start()
     {
+        float growthVariation = Random.Range(0.8f, 1.5f);
+
         timeDilation = GetComponent<TimeDilation>();
+
+        actualMax = maxScale * Random.Range(0.9f, 1.1f);
+
+        transform.localScale = new Vector3(
+            (float)(baseScale.x),
+            (float)(baseScale.y * growthVariation),
+            (float)(baseScale.z)
+        );
     }
 
     private void Update ()
     {
         float growthVariation = Random.Range(0.8f, 1.5f);
 
-        float scaleFactor = (Time.deltaTime * timeDilation.gamma * 0.05f) * resetScale / resetTime;
+        float scaleFactor = Time.deltaTime * timeDilation.gamma * growthRate;
 
         if (transform.localScale.y > resetScale)
         {
-            transform.localScale = new Vector3(
-                (float)(baseScale),
-                (float)(baseScale * growthVariation),
-                (float)(baseScale)
+            scale = new Vector3(
+                (float)(baseScale.x),
+                (float)(baseScale.y * growthVariation),
+                (float)(baseScale.z)
             );
+
+            actualMax = maxScale * Random.Range(0.9f, 1.1f);
         }
         else
         {
-            transform.localScale = transform.localScale + new Vector3(
-                (float)(transform.localScale.x * scaleFactor * widthFactor),
-                (float)(transform.localScale.y * scaleFactor * growthVariation),
-                (float)(transform.localScale.z * scaleFactor * widthFactor)
+            scale = new Vector3(
+                (float)(scale.x * (1 + scaleFactor * widthFactor)),
+                (float)(scale.y * (1 + scaleFactor * growthVariation)),
+                (float)(scale.z * (1 + scaleFactor * widthFactor))
             );
+        }
+
+        if (scale.y < maxScale)
+        {
+            transform.localScale = scale;
         }
     }
 }
