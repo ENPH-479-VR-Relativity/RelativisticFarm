@@ -12,7 +12,6 @@ public class MenuController : MonoBehaviour
 
     public void FarmBtn()
     {
-        print("abc123");
         SceneManager.LoadScene("JedScene");
     }
 
