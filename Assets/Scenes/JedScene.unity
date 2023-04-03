@@ -5889,7 +5889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &354973618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5932,13 +5932,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ecc5ee24514fb4d9c1b2b9b3edb1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  globalProperties: {fileID: 0}
-  TimeDilationButton: {fileID: 0}
-  SpatialDistortionButton: {fileID: 0}
-  DopplerButton: {fileID: 0}
-  SpotlightButton: {fileID: 0}
-  onColor: {r: 0, g: 0, b: 0, a: 0}
-  offColor: {r: 0, g: 0, b: 0, a: 0}
+  globalProperties: {fileID: 1304530885}
+  TimeDilationButton: {fileID: 264914175}
+  SpatialDistortionButton: {fileID: 336654824}
+  DopplerButton: {fileID: 1089285826}
+  SpotlightButton: {fileID: 87692927}
+  onColor: {r: 1, g: 1, b: 1, a: 1}
+  offColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
 --- !u!114 &354973621
 MonoBehaviour:
   m_ObjectHideFlags: 0
