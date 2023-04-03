@@ -24880,6 +24880,7 @@ MonoBehaviour:
   LightSpeed: 3
   SpaceScalar: 3
   TimeScalar: 0.1
+  SpotlightScalar: 0.5
   positionProperty:
     m_UseReference: 1
     m_Action:
