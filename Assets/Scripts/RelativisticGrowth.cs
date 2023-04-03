@@ -10,6 +10,8 @@ public class RelativisticGrowth : MonoBehaviour {
 
     private TimeDilation timeDilation;
 
+    public bool diagnostics = false;
+
     public float maxScale = 3f; // As big as the object will get in the y-axis. 
     public float resetScale = 5f; // Effectively the amount of time before reset, in units of scale. While resetScale > scale > maxScale, the object won't grow but won't reset. 
     public float growthRate = 0.0035f;
@@ -27,6 +29,12 @@ public class RelativisticGrowth : MonoBehaviour {
 
         actualMax = maxScale * Random.Range(0.9f, 1.1f);
 
+        scale = new Vector3(
+            (float)(baseScale.x),
+            (float)(baseScale.y * growthVariation),
+            (float)(baseScale.z)
+        );
+
         transform.localScale = new Vector3(
             (float)(baseScale.x),
             (float)(baseScale.y * growthVariation),
@@ -40,7 +48,7 @@ public class RelativisticGrowth : MonoBehaviour {
 
         float scaleFactor = Time.deltaTime * timeDilation.gamma * growthRate;
 
-        if (transform.localScale.y > resetScale)
+        if (scale.y > resetScale)
         {
             scale = new Vector3(
                 (float)(baseScale.x),
@@ -62,6 +70,11 @@ public class RelativisticGrowth : MonoBehaviour {
         if (scale.y < maxScale)
         {
             transform.localScale = scale;
+        }
+
+        if (diagnostics)
+        {
+            print(scale);
         }
     }
 }
