@@ -24808,6 +24808,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 6594899800811469510, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  XRRigTransform: {fileID: 505562321}
 --- !u!1 &1308337155 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 84957c3fa8720b64eaf9c397e1826764, type: 3}
