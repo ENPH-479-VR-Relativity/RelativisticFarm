@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
         }
     }
     public GlobalProperties globalProperties;
-    public Image TimeDilationButton, SpatialDistortionButton, DopplerButton, SpotlightButton;
+    public Image TimeDilationButton, SpatialDistortionButton, DopplerButton, SpotlightButton, TutorialButton;
     public Color onColor, offColor;
 
     void Start()
@@ -53,17 +53,11 @@ public class MenuController : MonoBehaviour
 
     public void TutorialBtn()
     {
-        SceneManager.LoadScene("JedScene");
-    }
-
-    public void SpaceshipBtn()
-    {
-        SceneManager.LoadScene("JedScene");
+        SceneManager.LoadScene("TutorialScene");
     }
 
     public void FarmBtn()
     {
         SceneManager.LoadScene("JedScene");
     }
-
 }

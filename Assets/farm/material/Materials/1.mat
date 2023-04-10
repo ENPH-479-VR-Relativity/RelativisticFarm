@@ -194,12 +194,15 @@ Material:
     - _ChromaToleranceB: 15
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
+    - _ColorMask: 15
     - _Cull: 2
+    - _CullMode: 0
     - _Cutoff: 0.5
     - _Darken: 0
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DetailTexIntensity: 1
+    - _DiffusePower: 1
     - _DitherStrength: 16
     - _DstBlend: 0
     - _EnableHeightBlend: 0
@@ -212,6 +215,8 @@ Material:
     - _HeightTransition: 0
     - _InnerRadius: 0.4
     - _Intensity: 1
+    - _MaskSoftnessX: 0
+    - _MaskSoftnessY: 0
     - _Metallic: 0
     - _Metallic0: 0
     - _Metallic1: 0
@@ -239,11 +244,18 @@ Material:
     - _SquashAmount: 1
     - _SrcBlend: 1
     - _StampMultipler: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
     - _Subtract: 0
     - _Surface: 0
     - _Tiling: 1
     - _UV: 1
     - _UVSec: 0
+    - _VertexOffsetX: 0
+    - _VertexOffsetY: 0
     - _Visible: 1
     - _WindQuality: 0
     - _WireThickness: 100
@@ -255,6 +267,7 @@ Material:
     - _premultiply: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDark: {r: 0, g: 0, b: 0, a: 1}
     - _ColorLight: {r: 1, g: 1, b: 1, a: 1}
