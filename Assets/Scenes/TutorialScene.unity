@@ -539,7 +539,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Push the LEFT joystick forward to teleport around the world.
+  m_Text: 'Push the RIGHT joystick forward to teleport around the world.
 
 
     Take
