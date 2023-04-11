@@ -12,22 +12,33 @@ public class TeleportationManager : MonoBehaviour
     [SerializeField] private TeleportationProvider tpProvider;
     private InputAction _joystick;
     private bool _isActive;
+    private InputAction activate;
+    private InputAction cancel;
 
     // Start is called before the first frame update
     void Start()
     {
         rayInteractor.enabled = false;
 
-        var activate = actionAsset.FindActionMap("XRI RightHand").FindAction("Teleport Mode Activate");
+        activate = actionAsset.FindActionMap("XRI RightHand").FindAction("Teleport Mode Activate");
         activate.Enable();
         activate.performed += OnTeleportActivate;
 
-        var cancel = actionAsset.FindActionMap("XRI RightHand").FindAction("Teleport Mode Cancel");
+        cancel = actionAsset.FindActionMap("XRI RightHand").FindAction("Teleport Mode Cancel");
         cancel.Enable();
         cancel.performed += OnTeleportCancel;
 
         _joystick = actionAsset.FindActionMap("XRI RightHand").FindAction("Move");
         _joystick.Enable();
+    }
+
+    public void CleanupCallbacks()
+    {
+        activate.performed -= OnTeleportActivate;
+        cancel.performed -= OnTeleportCancel;
+        activate.Disable();
+        cancel.Disable();
+        _joystick.Disable();
     }
 
     // Update is called once per frame

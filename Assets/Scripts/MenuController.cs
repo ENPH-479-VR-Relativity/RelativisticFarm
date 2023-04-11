@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     public Color onColor, offColor;
     public Slider TimeDilationSlider, SpatialDistortionSlider, CSlider, SpotlightSlider;
     public Text TimeDilationText, SpatialDistortionText, CText, SpotlightText;
+    public TeleportationManager tm;
 
     void Start()
     {
@@ -83,11 +84,13 @@ public class MenuController : MonoBehaviour
 
     public void TutorialBtn()
     {
+        tm.CleanupCallbacks();
         SceneManager.LoadScene("TutorialScene");
     }
 
     public void FarmBtn()
     {
+        tm.CleanupCallbacks();
         SceneManager.LoadScene("JedScene");
     }
 

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class WelcomeManager : MonoBehaviour 
 {
 
+    public TeleportationManager tm;
 
     void Start()
     {
@@ -14,6 +15,7 @@ public class WelcomeManager : MonoBehaviour
 
     public void FarmBtn()
     {
+        tm.CleanupCallbacks();
         SceneManager.LoadScene("JedScene");
     }
 }
