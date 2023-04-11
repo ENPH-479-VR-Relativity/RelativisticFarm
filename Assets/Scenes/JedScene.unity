@@ -40279,7 +40279,7 @@ MonoBehaviour:
   IsSpotlightEnabled: 1
   IsDopplerEnabled: 1
   IsTimeDilationEnabled: 1
-  LightSpeed: 3
+  LightSpeed: 5
   SpaceScalar: 3
   TimeScalar: 4.975
   SpotlightScalar: 1
