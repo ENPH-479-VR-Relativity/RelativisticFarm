@@ -195,7 +195,6 @@ GameObject:
   - component: {fileID: 101321121}
   - component: {fileID: 101321120}
   - component: {fileID: 101321119}
-  - component: {fileID: 101321118}
   - component: {fileID: 101321117}
   m_Layer: 5
   m_Name: Spotlight
@@ -223,26 +222,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &101321118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101321116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ecc5ee24514fb4d9c1b2b9b3edb1dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  globalProperties: {fileID: 0}
-  TimeDilationButton: {fileID: 0}
-  SpatialDistortionButton: {fileID: 0}
-  DopplerButton: {fileID: 0}
-  SpotlightButton: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  onColor: {r: 1, g: 1, b: 1, a: 1}
-  offColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
 --- !u!114 &101321119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,8 +681,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 989087621}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+      - m_Target: {fileID: 989087625}
+        m_TargetAssemblyTypeName: WelcomeManager, Assembly-CSharp
         m_MethodName: FarmBtn
         m_Mode: 1
         m_Arguments:
@@ -1069,7 +1048,6 @@ GameObject:
   - component: {fileID: 761976685}
   - component: {fileID: 761976684}
   - component: {fileID: 761976683}
-  - component: {fileID: 761976682}
   - component: {fileID: 761976681}
   m_Layer: 5
   m_Name: Time Dilation
@@ -1097,26 +1075,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &761976682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761976680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ecc5ee24514fb4d9c1b2b9b3edb1dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  globalProperties: {fileID: 0}
-  TimeDilationButton: {fileID: 0}
-  SpatialDistortionButton: {fileID: 0}
-  DopplerButton: {fileID: 0}
-  SpotlightButton: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  onColor: {r: 1, g: 1, b: 1, a: 1}
-  offColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
 --- !u!114 &761976683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2296,8 +2254,8 @@ GameObject:
   - component: {fileID: 989087624}
   - component: {fileID: 989087623}
   - component: {fileID: 989087622}
-  - component: {fileID: 989087621}
   - component: {fileID: 989087620}
+  - component: {fileID: 989087625}
   m_Layer: 5
   m_Name: Menu Canvas
   m_TagString: Untagged
@@ -2324,26 +2282,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &989087621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989087619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ecc5ee24514fb4d9c1b2b9b3edb1dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  globalProperties: {fileID: 0}
-  TimeDilationButton: {fileID: 0}
-  SpatialDistortionButton: {fileID: 0}
-  DopplerButton: {fileID: 0}
-  SpotlightButton: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  onColor: {r: 1, g: 1, b: 1, a: 1}
-  offColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
 --- !u!114 &989087622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2415,6 +2353,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.603}
   m_SizeDelta: {x: 650, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &989087625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989087619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216183b423927342b089eb27a2800c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1007567995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,7 +2717,6 @@ GameObject:
   - component: {fileID: 1129392739}
   - component: {fileID: 1129392738}
   - component: {fileID: 1129392737}
-  - component: {fileID: 1129392736}
   - component: {fileID: 1129392735}
   m_Layer: 5
   m_Name: Space Dilation
@@ -2795,26 +2744,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &1129392736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129392734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ecc5ee24514fb4d9c1b2b9b3edb1dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  globalProperties: {fileID: 0}
-  TimeDilationButton: {fileID: 0}
-  SpatialDistortionButton: {fileID: 0}
-  DopplerButton: {fileID: 0}
-  SpotlightButton: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  onColor: {r: 1, g: 1, b: 1, a: 1}
-  offColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
 --- !u!114 &1129392737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3177,7 +3106,6 @@ GameObject:
   - component: {fileID: 1368988465}
   - component: {fileID: 1368988464}
   - component: {fileID: 1368988463}
-  - component: {fileID: 1368988462}
   - component: {fileID: 1368988461}
   m_Layer: 5
   m_Name: Doppler
@@ -3205,26 +3133,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &1368988462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368988460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ecc5ee24514fb4d9c1b2b9b3edb1dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  globalProperties: {fileID: 0}
-  TimeDilationButton: {fileID: 0}
-  SpatialDistortionButton: {fileID: 0}
-  DopplerButton: {fileID: 0}
-  SpotlightButton: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  onColor: {r: 1, g: 1, b: 1, a: 1}
-  offColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
 --- !u!114 &1368988463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3956,6 +3864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896507154}
   - component: {fileID: 1896507153}
+  - component: {fileID: 1896507155}
   m_Layer: 0
   m_Name: Welcome
   m_TagString: Untagged
@@ -4006,6 +3915,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896507155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896507152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216183b423927342b089eb27a2800c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1908163944
 GameObject:
   m_ObjectHideFlags: 0
